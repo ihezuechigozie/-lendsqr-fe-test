@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.filter-section {
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    font-family: "Work Sans", serif;
+    width: 220px;
+    height: auto; 
+    display: block;
+   
+    form {
+    display: flex;
+    flex-direction: column;
+    
+   
+    label {
+        margin-bottom: 15px;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 16.42px;
+        text-align: left;
+        color: #545F7D;
+        outline: none;
+        margin-top: 3px;
+       
+        .select-div{
+            width: 190px;
+            height: 34px;
+            padding-left: 6px; 
+        }
+        .label-div{
+          margin-top: 0px;
+        }
+        select,
+        input{
+            width: 180px;
+            height: 30px;
+            border-radius: 5px;
+            outline: none; 
+            display: block;
+            margin-top: 3px;
+            background: #FFF;
+            border: 1px solid #21407d57;
+            font-size: 11px;
+            padding-left: 6px;
+            font-weight: 400;
+            color: #545f7dd7;
+        }
+
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 12px;
+
+        .reset-btn,
+        .filter-btn {
+        padding: 7px 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 16.42px;
+        text-align: center;
+       
+         
+        }
+
+        .reset-btn {
+        height: 30px;
+        width: 87px;
+        background-color: #fff;
+        border: 1px solid #545F7D;
+        color: #545F7D;
+
+        }
+
+        .filter-btn {
+        border: 1px solid #39CDCC;
+        background: #39CDCC;
+        color: #FFFFFF;
+        height: 30px;
+        width: 87px;
+        }
+    }
+    }
+}
+

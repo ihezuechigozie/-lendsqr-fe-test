@@ -1,0 +1,70 @@
+$desktop: 1024px;
+$tablet: 770px;
+$mobile: 450px;
+
+body{
+  background-color: #fbfbfb;
+  width: 100%;
+  margin: 0;
+}
+.flex-dashboard{
+  display: inline-flex;
+  margin: 0;
+
+}
+.flex-dashboard-2{
+  display: none;
+ }
+.dasboard-cont{
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: $tablet) {
+  body{
+    width: 100%;
+  }
+  .flex-dashboard{
+    display: none;
+  }
+  .dasboard-cont-2{
+   display: block;
+  }
+  .flex-dashboard-2{
+    width: 97%;
+    margin: 0;
+   display: block;
+   justify-content: center;
+   justify-self: center;
+   padding-left: 20px;
+   margin-top: 30px;
+  }
+  .dashboard-card{
+   display: inline-block;
+  }
+ 
+}
+
+
+@media (max-width: $mobile) {
+  body{
+    width: 100%;
+  }
+   .flex-dashboard{
+     display: none;
+   }
+   .dasboard-cont-2{
+    display: block;
+   }
+   .flex-dashboard-2{
+    width: 100%;
+    height: auto;
+   }
+   .dashboard-card{
+    display: inline-block;
+   }
+  
+}
+
+
+

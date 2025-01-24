@@ -1,0 +1,273 @@
+
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 425px;
+
+.side-bar-cont{
+    width: 283px;
+    height: auto;
+    background-color: #fff;
+    margin-top: 80px;
+    margin-left: 1px;
+    font-family: "Work Sans", serif;
+    // overflow-y: auto;
+}
+.organization-dropdown{
+    position: absolute;
+    z-index: 20;
+    left: 0px;
+    margin-top: 40px;
+    // display: block;
+}
+.text-1-div{
+    width: 283px;
+    height: 40px;
+    margin-top: 27px;
+    margin-left: 30px;  
+    color: #213F7D; 
+    display: inline-flex;
+    gap: 12px;
+}
+.text-1,
+.text-2{
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: center;
+    text-decoration-skip-ink: none; 
+    cursor: default;  
+}
+.sack-icon,
+.hand-2-icon,
+.briefcase-icon,
+.hand-icon,
+.home-icon,
+.sackdollar-icon,
+.mobile-icon{
+    font-size: 16px;
+    color: #213F7D;
+}
+.arrowdown-icon{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+.base-div,
+.base-div-2{
+    width: 283px;
+    height: 40px;
+    margin: 0px;
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 27px;
+    transition: 0.5s;
+}
+.base-div-2{
+    margin-top: 0px;
+}
+.stripe{
+  width: 3px;
+  height: 40px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.base-div:hover,
+.base-div-2:hover{
+    background-color: #39cdcd1e;
+  .stripe{
+    background-color: #39cdcc;
+  }
+}
+.text-2-div{
+    width: auto;
+    height: auto;
+    margin-left: 15px;
+    margin-top: -6px;
+    display: inline-flex;
+    text-align: left;
+    gap: 10px;
+    color: #213F7D; 
+    opacity: 60%; 
+}
+.text-3-div,
+.text-4-div{
+    width: auto;
+    height: auto;
+    margin-left: 14px;
+    margin-top: -6px;
+    display: inline-flex;
+    text-align: left;
+    gap: 12px;
+    color: #213F7D; 
+    opacity: 60%; 
+}
+.text-4-div{
+    margin-left: 20px;
+}
+.customers{
+    width: 75px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 30px; 
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.08px;
+    text-align: left;
+    color:#545F7D;
+}
+.hand-icon{
+    margin-left: -15px;
+}
+
+.sackdollar-icon{
+    margin-top: 13px;
+    margin-left: 3px;
+    font-size: 13px;
+}
+.icon-div-3{
+ display: block;
+ margin-top: 0px;
+}
+.sack-icon{
+ display: block;
+}
+.hand-2-icon{
+ display: block;
+ margin-top: -25px;
+}
+
+.arrow-icon-div{
+    display: block;
+}
+.arrowleft-icon{
+ font-size: 6px;
+ margin-left: 0px;
+}
+.arrowright-icon{
+ font-size: 6px;
+ display: block;
+ margin-left: 0px;
+ margin-top: -7px;
+}
+.icon-4-div{
+    display: block;
+    margin-top: -5px;
+
+}
+.mobile-icon{
+    display: block;
+    margin-top: -27px;
+    margin-left: -3px;
+}
+.linee{
+    width: 100%;
+    border: 1px solid #21407d53;
+    margin-top: 70px;
+}
+.version{
+    margin-left: 27px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.08px;
+    text-align: left;
+    color: #213F7D;
+
+}
+.logout{
+    height: 16px;
+    width: 16px;
+    color: #213F7D;
+
+}
+
+
+@media (max-width: $desktop) {
+    .side-bar-cont {
+      width: 250px; 
+      margin-top: 70px;
+    }
+  
+    .text-1-div {
+      gap: 10px; 
+    }
+  
+    .base-div,
+    .base-div-2 {
+      width: 250px; 
+    }
+  
+    .customers {
+      margin-left: 20px; 
+    }
+  }
+  
+  @media (max-width: $tablet) {
+    .side-bar-cont {
+      width: 200px; 
+    }
+  
+    .text-1-div {
+      font-size: 14px; 
+      margin-left: 20px;
+    }
+  
+    .base-div,
+    .base-div-2 {
+      width: 200px; 
+    }
+  
+    .customers {
+      margin-left: 10px;
+    }
+  }
+  
+  @media (max-width: $mobile) {
+      
+    .side-bar-cont {
+        width: 200px;
+        margin: 0; 
+      }
+    
+      .text-1-div {
+        font-size: 14px; 
+        margin-left: 20px;
+      }
+    
+      .base-div,
+      .base-div-2 {
+        width: 200px; 
+      }
+    
+      .customers {
+        margin-left: 10px;
+      }
+    }
+
+    // .side-bar-cont {
+    //   width: 100%;
+    //   margin-left: 0;
+    //   margin-top: 50px;
+    // }
+  
+    // .text-1-div {
+    //   font-size: 12px; 
+    //   flex-direction: column; 
+    //   margin-left: 10px;
+    //   gap: 5px; 
+    // }
+  
+    // .base-div,
+    // .base-div-2 {
+    //   width: 100%;
+    // }
+  
+    // .customers {
+    //   margin-left: 5px; 
+    //   font-size: 10px; 
+    // }
+  
+    // .logout {
+    //   font-size: 12px;
+    // }
+//   }

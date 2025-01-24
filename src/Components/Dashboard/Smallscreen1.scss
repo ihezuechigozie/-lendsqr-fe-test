@@ -1,0 +1,181 @@
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 425px;
+
+.small-screen-container{
+    width: 190px;
+    height: auto;
+    background-color: #fff;
+    margin-top: 80px;
+    margin-left: 1px;
+    font-family: "Work Sans", serif;
+    // overflow-y: auto;
+}
+.organizations{
+    position: absolute;
+    z-index: 20;
+    left: 0px;
+    margin-top: 40px;
+    // display: block;
+}
+.texts{
+    width: 140px;
+    height: 30px;
+    margin-top: 27px;
+    margin-left: 25px;  
+    color: #213F7D; 
+    display: inline-flex;
+    gap: 12px;
+}
+.normal-text-1,
+.normal-text-2{
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18.77px;
+    text-align: center;
+    text-decoration-skip-ink: none; 
+    cursor: default;  
+}
+.sacks,
+.hands,
+.briefcases,
+.hands,
+.homes,
+.sackdollars,
+.mobiles{
+    font-size: 14px;
+    color: #213F7D;
+}
+.arrowdowns{
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.bases,
+.bases2{
+    width: 190px;
+    height: 30px;
+    margin: 0px;
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.bases2{
+    margin-top: 0px;
+}
+.stripses{
+  width: 3px;
+  height: 30px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.bases:hover,
+.bases2:hover{
+    background-color: #39cdcd1e;
+  .stripses{
+    background-color: #39cdcc;
+  }
+}
+.texts2{
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-top: -6px;
+    display: inline-flex;
+    text-align: left;
+    gap: 10px;
+    color: #213F7D; 
+    opacity: 60%; 
+}
+.normal-text-3,
+.normal-text-4{
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-top: -6px;
+    display: inline-flex;
+    text-align: left;
+    gap: 12px;
+    color: #213F7D; 
+    opacity: 60%; 
+}
+.normal-text-4{
+    margin-left: 16px;
+}
+.customer-a{
+    width: 65px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 22px; 
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14.08px;
+    text-align: left;
+    color:#545F7D;
+}
+.hands{
+    margin-left: -15px;
+}
+
+.sackdollars{
+    margin-top: 13px;
+    margin-left: 3px;
+    font-size: 13px;
+}
+.icon-div-3{
+ display: block;
+ margin-top: 0px;
+}
+.sacks{
+ display: block;
+}
+.hands{
+ display: block;
+ margin-top: -25px;
+}
+
+.arrow-icon-div{
+    display: block;
+}
+.arrowlefts{
+ font-size: 6px;
+ margin-left: 0px;
+}
+.arrowrights{
+ font-size: 6px;
+ display: block;
+ margin-left: 0px;
+ margin-top: -7px;
+}
+.icon-4-div{
+    display: block;
+    margin-top: -5px;
+
+}
+.mobiles{
+    display: block;
+    margin-top: -27px;
+    margin-left: -3px;
+}
+.linee{
+    width: 100%;
+    border: 1px solid #21407d53;
+    margin-top: 70px;
+}
+.versions{
+    margin-left: 22px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14.08px;
+    text-align: left;
+    color: #213F7D;
+
+}
+.logouts-a{
+    height: 13px;
+    width: 13px;
+    color: #213F7D;
+
+}

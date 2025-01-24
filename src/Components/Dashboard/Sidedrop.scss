@@ -1,0 +1,53 @@
+.sidedrop-cont{
+    width:190px;
+    height: auto;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.42px;
+    position: absolute;
+    text-align: left;
+    color: #545F7D;
+    font-family: "Work Sans", serif;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #545F7D0A;
+    box-shadow: 1px 3px 4px 0px #0000000A;
+    cursor: pointer;
+    .drop-cont{
+
+        .texts-1{
+            display: flex;
+            gap: 5px;
+            margin-left: 7px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .eye-icon{
+            width: 16px;
+            height: 16px;
+        }
+        
+        .base-hover{
+            width: 190px;
+            height: 30px;
+            display: inline-flex;
+            transition: 0.5s;
+            text-align: left;
+            text-align: center;
+        }
+
+        .stripes{
+        width: 3px;
+        height: 30px;
+        background-color: #fff;
+        transition: 0.5s;
+        }
+        .base-hover:hover{
+            background-color: #39cdcd1e;
+            .stripes{
+                background-color: #39cdcc;
+            }
+        }
+    }
+}
