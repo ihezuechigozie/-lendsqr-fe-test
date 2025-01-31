@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from './assets/image-1.jpg'
 import Image2 from './assets/Group.jpg'
 import './Login.scss'
+
 
 const Login: React.FC =()=>{
 const [showPass, setShowPass] = useState(false)
@@ -16,22 +17,31 @@ const passwordVisibility = () =>{
     setPassVisible(false)
   }
 }
+useEffect(() => {
+  if (!localStorage.getItem("userToken")) {
+    window.history.pushState(null, "", window.location.href);
+    window.addEventListener("popstate", () => {
+      ("/login");
+    });
+  }
+}, []);
+
 
   return (
     <>
       <div className={'login-container'}>
-       <div className='media-q'>
-       <div className={'left-section'}>
-        <img src={Image2} alt="Lendsqr-Logo" className='lendsqr-logo'/>
-        <img
-          src={Image}
-          alt="Login Illustration"
-          className={'illustration'}
-        />
-      </div>
-       </div>
+       {/* <div className='media-q'> */}
+        <div className={'left-section'}>
+          <img src={Image2} alt="Lendsqr-Logo" className='lendsqr-logo'/>
+          <img
+            src={Image}
+            alt="Login Illustration"
+            className={'illustration'}
+          />
+        </div>
+       {/* </div> */}
       <div className={'right-section'}>
-        <div className='media-q'>
+        {/* <div className='media-q'> */}
         <h1 className='welcome'>Welcome!</h1>
         <p>Enter details to login.</p>
         <form className={'login-form'}>
@@ -58,7 +68,7 @@ const passwordVisibility = () =>{
             LOG IN
           </button>
         </form>
-        </div>
+        {/* </div> */}
       </div>
     </div>
     </>

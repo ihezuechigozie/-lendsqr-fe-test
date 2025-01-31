@@ -1,13 +1,23 @@
 import React from "react";
 import './DashboardCard.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoins, faFileLines, faUserFriends, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {faCoins, faFileLines, faUserFriends, faUsers } from "@fortawesome/free-solid-svg-icons";
+
+
+
+
 
 const DashboardCards: React.FC =() =>{
+
+ 
+  
   return (
     <>
       <div className="dashboard-container">
-        <div className="user">Users</div>
+        <div className="user">
+       
+          Users
+          </div>
         <div className="users-flexed-box">
          <div className="box-a">
          <div className="box-1">

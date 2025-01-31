@@ -4,13 +4,14 @@ body{
     height: auto;
 }
 
-.filter-section {
-    display: block;
+.filter-drop {
+    display: flex;
     justify-content: center;
     justify-items: center;
     justify-self: center;
     font-family: "Work Sans", serif;
-    width: 220px;
+    width: 190px;
+    padding: 15px;
     height: auto; 
     display: block;
    
@@ -58,6 +59,7 @@ body{
     .filter-buttons {
         display: flex;
         gap: 12px;
+        margin-top: 10px;
 
         .reset-btn,
         .filter-btn {

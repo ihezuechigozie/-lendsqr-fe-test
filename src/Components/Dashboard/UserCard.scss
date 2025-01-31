@@ -1,9 +1,11 @@
- 
+$tablet: 1030px;
+$mobile: 440px;
+
  .usercard-container{
     width: 840px;
     margin-top: 150px;
     margin-left: 48px;
-   //  border: 1px solid;
+    
    .user-card-header {
      width: 100%;
      display: block;
@@ -48,19 +50,26 @@
          font-weight: 600;
          margin-left: 10px;
    
-         &.blacklist-btn {
+        &.blacklist-btn {
            border: 1px solid #E4033B;
            color: #E4033B;
            width: 170px;
            height: 40px;
-    
+           transition: 0.5s;
          }
-   
+         &.blacklist-btn:hover{
+          background-color:  #59757521;
+         }
+        
          &.activate-btn {
            border: 1px solid #39CDCC;
            color: #39CDCC;
            width: 170px;
            height: 40px;
+           transition: 0.5s;
+         }
+         &.activate-btn:hover{
+          background-color:  #59757521;
          }
        }
      }
@@ -80,7 +89,6 @@
          margin-left: 15px;
          
          .user-info {
-        //    border: 1px solid;
            width: 613px;
            height: 100px;
            display: flex;
@@ -135,7 +143,8 @@
              display: block;
    
            }
-           .line,
+           .line-a,
+           .line-b,
            .line-2{
              width: 0;
              height: 80px;
@@ -181,8 +190,7 @@
          .tabs {
            display: flex;
            width: 810px;
-           justify-content: space-between;
-        //    border: 1px solid ;
+           gap: 50px;
            padding-top: 10px;
            margin-top: 48px;
      
@@ -214,4 +222,242 @@
    
     
   }
+
   
+  @media (max-width: $tablet) {
+    .usercard-container{
+      width: 96%;
+      margin-top: 30px;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: center;
+      justify-items: center;
+      margin-left: 0px;
+      padding: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background: none;
+      .user-card-header {
+       
+        .back-link {
+          font-size: 15px;
+          text-align: center;
+          margin-left: 32px;
+        }
+       .h3-div{
+        margin-left: 32px;
+       }
+        .button-user{
+          gap: 20px;
+        
+         
+        }
+      }
+      .user-card {
+        // border: 1px solid;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-direction: column;
+        margin-left: 0px;
+        .user-card-body { 
+
+          .user-info {
+            //  border: 1px solid;
+             width: auto;
+             margin-left: 0px;
+             height: auto;
+             padding-right: 10px;
+
+          }
+          .tabs {
+            display: flex;
+            width: auto;
+            gap: 15px;
+            // width: 200px;
+            // padding-top: 10px;
+            margin-top: 25px;
+      
+            .gen-con{
+              font-size: 15px;
+              margin: 4px;
+              text-align: left;
+              justify-content: center;
+              margin-left: 38px;
+            }
+         
+            .stripe{
+             display: none;
+            }
+           
+          }
+        }
+
+
+      }
+      
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .usercard-container{
+      width: 89%;
+      display: flex;
+      margin-top: 30px;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: center;
+      justify-items: center;
+      margin-left: 0px;
+      padding: 0px;
+      background: none;
+      
+     .user-card-header {
+       
+       .back-link {
+         font-size: 15px;
+         text-align: center;
+         margin-left: 32px;
+     
+       }
+       .button-user{
+         display: flex;
+         justify-self: center;
+         justify-content: center;
+         gap: 40px;
+       
+        
+       }
+     
+       .h3-div {
+         font-size: 24px;
+         text-align: center;
+         margin-left: 32px;
+       }
+     
+       .action-buttons {
+        //  border: 1px solid;
+         flex-direction: column;
+         justify-content: center;
+         justify-self: center;
+         margin: 0;
+         
+         
+         button {
+           font-size: 12px;
+     
+          &.blacklist-btn {
+             width: 120px;
+             height: 40px;
+           }
+           &.activate-btn {
+             width: 120px;
+             height: 40px;
+           }
+         
+         }
+       }
+     }
+     .user-card {
+         width: auto;
+         height: auto;
+         display: flex;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         flex-direction: column;
+         margin-left: 0px;
+
+       
+         .user-card-body { 
+          
+           .user-info {
+            //  border: 1px solid;
+             width: 55%;
+             margin-left: 38px;
+             height: auto;
+             flex-direction: column;
+             
+       
+             .avatar{
+               width: 50px;
+               height: 50px;
+             }
+             .avatar-i{
+               width: 20px;
+               height: 20px;
+               display: flex;
+               justify-self: center;
+               margin-top: 13px;
+             }
+             
+             .name-div {
+               display: block;
+               font-size: 24px;
+               font-weight: 500;
+             }
+             .code-number {
+               font-size: 15px;   
+             }
+             .user-tier-text{
+               margin-top: 20px;
+               text-align: left;
+               display: block;
+     
+             }
+             .line-a
+             {
+               width: 80px;
+               height: 0;
+               margin-top: 10px;
+               
+             }
+             .line-b
+             {
+               width: 80px;
+               height: 0;
+               margin-top: 18px; 
+             }
+             
+             .user-name-div{
+               margin-top: 18px;
+             }
+       
+             .account-info {
+              
+               h4 {
+                 font-size: 22px;
+               }
+               p {
+                 font-size: 16px;
+               }
+             }
+             
+           }
+       
+           .tabs {
+             display: flex;
+             flex-direction: column;
+             gap: 15px;
+             width: 200px;
+             padding-top: 10px;
+             margin-top: 25px;
+       
+             .gen-con{
+               font-size: 15px;
+               margin: 4px;
+               text-align: left;
+               justify-content: center;
+               margin-left: 38px;
+             }
+          
+             .stripe{
+              display: none;
+             }
+            
+           }
+         }
+       }
+     
+    }
+    
+    }

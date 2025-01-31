@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './Usertable2.scss';
+import './Usertable3.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDownWideShort, faChevronLeft, faChevronRight, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import Dropdown2 from './Dropdown2';
-import Dropdown from './Dropdown';
+import Filterdrop from './Filterdrop';
 
 
 interface User {
@@ -16,21 +16,21 @@ interface User {
   status: string;
 }
 
-interface UserTableProps {
+interface UserTable3 {
   input?: string | null; 
 }
 
 
 
-const Usertable2: React.FC<UserTableProps> = ({ input }) => {
+const UserTable3: React.FC<UserTable3> = ({ input }) => {
  
 
   const [allUsers, setAllUsers] = useState<User[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [dropdownVisibility, setDropdownVisibility] = useState<{ [key: number]: boolean }>({});
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
-const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { top: number; left: number } }>({});
-  const [usersPerPage] = useState<number>(10);
+  const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { top: number; left: number } }>({});
+  const [usersPerPage] = useState<number>(1);
 
   
   const url = 'https://run.mocky.io/v3/e599e93a-18e6-49bc-83e4-ac0ad74df1c3';
@@ -132,7 +132,7 @@ const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { to
     }
   };
   const calculateDropdownPosition = (index: number) => {
-    const iconElement = document.querySelectorAll('.dropdown-icon')[index];
+    const iconElement = document.querySelectorAll('.dropdown-icons')[index];
     if (iconElement) {
       const rect = iconElement.getBoundingClientRect();
       setDropdownPositions((prev) => ({
@@ -184,21 +184,20 @@ const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { to
   };
 
   return (
-  <div className="table-container2">
-    <table>
-    <thead>
-    <tr>
-   {['ORGANIZATION', 'USERNAME', 'EMAIL', 'CONTACT', 'JOINED', 'STATUS'].map((header, index) => (
-   <th className="table-h" key={index}>
+ <div className="table-content">
+<table>  
+  <tr>
+   {['ORGANIZATION'].map((header, index) => (
+   <th className="table-head" key={index}>
     {header}
     <FontAwesomeIcon
       icon={faArrowDownWideShort}
       onClick={() => handleDropdownClick(index)}
-      className="dropdown-icon"
+      className="dropdown-icons"
     />
     {activeDropdown === index && (
       <div
-        className="dropdown-r"
+        className="dropdown-con"
         ref={(el) => {
           if (el) {
             const rect = el.getBoundingClientRect();
@@ -214,24 +213,229 @@ const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { to
           left: dropdownPositions[index]?.left || 'auto',
         }}
       >
-        <Dropdown />
+        <Filterdrop />
+      </div>
+    )}
+   
+  </th>
+))}
+ 
+ {currentUsers.map((user, index) => (
+    <tr key={index}>
+      <td>{user.organization}</td> 
+      
+
+  </tr>
+  ))}
+ 
+  </tr>
+
+   <tr>
+   {[ 'USERNAME'].map((header, index) => (
+   <th className="table-head" key={index}>
+    {header}
+    <FontAwesomeIcon
+      icon={faArrowDownWideShort}
+      onClick={() => handleDropdownClick(index)}
+      className="dropdown-icons"
+    />
+    {activeDropdown === index && (
+      <div
+        className="dropdown-con"
+        ref={(el) => {
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            const overflowRight = rect.right > window.innerWidth;
+        
+
+            if (overflowRight) el.style.left = `${window.innerWidth - rect.width - 62}px`;
+      
+          }
+        }}
+        style={{
+          top: dropdownPositions[index]?.top || 'auto',
+          left: dropdownPositions[index]?.left || 'auto',
+        }}
+      >
+        <Filterdrop />
       </div>
     )}
   </th>
 ))}
-  <th></th>
-  </tr>
-</thead>
-
-  <tbody>
   {currentUsers.map((user, index) => (
     <tr key={index}>
-      <td>{user.organization}</td>
-      <td className="username">{user.username}</td>
-      <td>{user.email}</td>
-      <td>{user.phoneNumber}</td>
-      <td>{user.dateJoined}</td>
-      <td>
+     <td className="username">{user.username}</td>
+     <td className=''>
+            <div className="dropdown-container">
+                <FontAwesomeIcon
+                icon={faEllipsisVertical}
+                className="ellipsis-icons"
+                onClick={() => toggleDropdown(index)}
+                />
+                {dropdownVisibility[index] && (
+                <div className="dropdown-l">
+                    <Dropdown2 />
+                </div>
+                )}
+            </div>
+       </td>
+
+    </tr>
+  ))}
+   </tr>
+
+  <tr>
+  {[ 'EMAIL'].map((header, index) => (
+   <th className="table-head" key={index}>
+    {header}
+    <FontAwesomeIcon
+      icon={faArrowDownWideShort}
+      onClick={() => handleDropdownClick(index)}
+      className="dropdown-icons"
+    />
+    {activeDropdown === index && (
+      <div
+        className="dropdown-con"
+        ref={(el) => {
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            const overflowRight = rect.right > window.innerWidth;
+        
+
+            if (overflowRight) el.style.left = `${window.innerWidth - rect.width - 62}px`;
+      
+          }
+        }}
+        style={{
+          top: dropdownPositions[index]?.top || 'auto',
+          left: dropdownPositions[index]?.left || 'auto',
+        }}
+      >
+        <Filterdrop />
+      </div>
+    )}
+  </th>
+))}
+  {currentUsers.map((user, index) => (
+    <tr key={index}> 
+     <td>{user.email}</td>
+    </tr>
+  ))}
+  </tr>
+ <tr>
+ {[ 'PHONE NUMBER'].map((header, index) => (
+   <th className="table-head" key={index}>
+    {header}
+    <FontAwesomeIcon
+      icon={faArrowDownWideShort}
+      onClick={() => handleDropdownClick(index)}
+      className="dropdown-icons"
+    />
+    {activeDropdown === index && (
+      <div
+        className="dropdown-con"
+        ref={(el) => {
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            const overflowRight = rect.right > window.innerWidth;
+        
+
+            if (overflowRight) el.style.left = `${window.innerWidth - rect.width - 62}px`;
+      
+          }
+        }}
+        style={{
+          top: dropdownPositions[index]?.top || 'auto',
+          left: dropdownPositions[index]?.left || 'auto',
+        }}
+      >
+        <Filterdrop />
+      </div>
+    )}
+  </th>
+))}
+  {currentUsers.map((user, index) => (
+    <tr key={index}>
+     <td>{user.phoneNumber}</td>
+    </tr>
+  ))}
+ </tr>
+  
+  <tr>
+  {[  'DATE JOINED'].map((header, index) => (
+   <th className="table-head" key={index}>
+    {header}
+    <FontAwesomeIcon
+      icon={faArrowDownWideShort}
+      onClick={() => handleDropdownClick(index)}
+      className="dropdown-icons"
+    />
+    {activeDropdown === index && (
+      <div
+        className="dropdown-con"
+        ref={(el) => {
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            const overflowRight = rect.right > window.innerWidth;
+        
+
+            if (overflowRight) el.style.left = `${window.innerWidth - rect.width - 62}px`;
+      
+          }
+        }}
+        style={{
+          top: dropdownPositions[index]?.top || 'auto',
+          left: dropdownPositions[index]?.left || 'auto',
+        }}
+      >
+        <Filterdrop />
+      </div>
+    )}
+  </th>
+))}
+  {currentUsers.map((user, index) => (
+    <tr key={index}>
+     <td>{user.dateJoined}</td>
+    </tr>
+  ))}
+  </tr>
+
+  <tr>
+  {['STATUS'].map((header, index) => (
+   <th className="table-head" key={index}>
+    {header}
+    <FontAwesomeIcon
+      icon={faArrowDownWideShort}
+      onClick={() => handleDropdownClick(index)}
+      className="dropdown-icons"
+    />
+    {activeDropdown === index && (
+      <div
+        className="dropdown-con"
+        ref={(el) => {
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            const overflowRight = rect.right > window.innerWidth;
+        
+
+            if (overflowRight) el.style.left = `${window.innerWidth - rect.width - 62}px`;
+      
+          }
+        }}
+        style={{
+          top: dropdownPositions[index]?.top || 'auto',
+          left: dropdownPositions[index]?.left || 'auto',
+        }}
+      >
+        <Filterdrop />
+      </div>
+    )}
+  </th>
+))}
+  {currentUsers.map((user, index) => (
+    <tr key={index}>
+     
+     <td>
         <span className={`status-badge ${getStatusClass(user.status)}`}>
           {user.status === "active" ? ( 
             <div className='acive-div'>
@@ -263,24 +467,12 @@ const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { to
         }
         </span>
       </td>
-      <td>
-  <div className="dropdown-container">
-    <FontAwesomeIcon
-      icon={faEllipsisVertical}
-      className="ellipsis-icon"
-      onClick={() => toggleDropdown(index)}
-    />
-    {dropdownVisibility[index] && (
-      <div className="dropdown-l">
-        <Dropdown2 />
-      </div>
-    )}
-  </div>
-</td>
 
     </tr>
   ))}
-</tbody>
+
+  </tr>
+
 </table>
 
 <div className="table-footer">
@@ -356,4 +548,4 @@ const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { to
   );
 };
 
-export default Usertable2;
+export default UserTable3;

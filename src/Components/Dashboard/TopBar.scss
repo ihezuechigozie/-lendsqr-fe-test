@@ -1,7 +1,6 @@
 
-$desktop: 1024px;
-$tablet: 770px;
-$mobile: 430px;
+$tablet: 1030px;
+$mobile: 440px;
 
 .icon-2 {
   font-size: 18px;
@@ -81,10 +80,20 @@ $mobile: 430px;
 .input-button {
   display: flex;
 }
+.organization-drop{
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  top: 195px;
+}
+.arrowdown-iconbars{
+  font-size: 27px;
+  display: none;
+}
 
 .docs {
-  // border: 1px solid;
   display: inline-flex;
+  font-family: "Work Sans", serif;
   margin-top: 25px;
   margin-left: 190px;
   gap: 20px;
@@ -92,57 +101,100 @@ $mobile: 430px;
 }
 
 .username-div {
+  font-family: "Work Sans", serif;
   display: inline-flex;
   gap: 8px;
   cursor: pointer;
 }
 
-@media (max-width: $desktop) {
-
-.nav-bar {
-    display: inline-flex;
-  }
-}
-
 @media (max-width: $tablet) {
+  body{
+    width: 100%;
+    margin: 0;
+  }
   .nav-bar {
     width: 100%;
     height: auto;
     flex-direction: column;
     justify-content: center;
-    justify-items: center;
     justify-self: center;
-    padding: 15px;
-    position: static;
+    justify-items: center;
+    padding-top: 19px;
+    padding-bottom: 15px;
     margin: 0;
+    position: static;
+    z-index: 0;
+    // padding-left: 15px;
+
+  }
+  .icon-1{
+    font-size: 22px;
+  }
+  .icon-2{
+    font-size: 25px;
   }
 
   .logo-div {
-    width: 100%;
-    flex-direction: column; 
-    margin: 0;
-    gap: 15px;
+    gap: 20px;
+   flex-direction: column;
+  }
+  .avatar{
+   margin-top: 9px;
   }
   .docs {
-    width: 100%;
-    margin: 0;
+    font-size: 20px;
+    display: flex;
     justify-content: center;
     justify-self: center;
-    display: inline-flex;
-    margin-top: 15px;
+    gap: 80px;
+    margin-left: 0px;
+    
+   
   }
+  .inputdiv {
+    width: 300px;
+    height: 23px;
+    padding: 8px 25px;
+  }
+  
+  .button-btn {
+    height: 42px;  
+    padding: 8px 27px;
+  }
+  .input-search{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .username-div {
+   display: flex;
+   justify-content: center;
+   justify-self: center;
+  
+}
+.organization-drop{
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  top: 225px;
+}
+.arrowdown-iconbars{
+  font-size: 27px;
+  display: block;
+  margin-top: 2px;
+}
 
 }
 
 @media (max-width: $mobile) {
   .nav-bar {
-    margin: 0;
     width: 100%;
     height: auto;
+    margin: 0;
     flex-direction: column; 
     justify-content: center;
     justify-items: center;
-    padding: 10px;
     position: static;
     z-index: 0;
   }
@@ -150,23 +202,29 @@ $mobile: 430px;
 
   .logo-div {
     flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
     margin: 0;
     justify-content: center;
-    gap: 20px;
+    gap: 22px;
   }
 
   .docs {
-    width: 100%;
+    // border: 1px solid;
+    width: auto;
     margin: 0;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    background: none;
     gap: 20px;
    
   }
   .inputdiv {
-    width: 150px;
+    width: 220px;
     height: 20px;
+   border-top-left-radius: 9px;
+   border-bottom-left-radius: 9px;
     padding: 8px 25px;
   }
   
@@ -180,5 +238,10 @@ $mobile: 430px;
 
   .username-div {
    display: flex;
+  }
+  .arrowdown-iconbars{
+    font-size: 27px;
+    display: block;
+    margin-right: 10px;
   }
 }

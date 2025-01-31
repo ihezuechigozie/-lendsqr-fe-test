@@ -2,7 +2,7 @@ import React from "react";
 import './UserCard.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong, faStar, faUser } from "@fortawesome/free-solid-svg-icons";
-
+import { Link } from 'react-router-dom';
 
 const UserCard: React.FC =() =>{
   return (
@@ -11,9 +11,9 @@ const UserCard: React.FC =() =>{
   
    <div className="user-card-header">
      <div>
-     <a href="/users" className="back-link">
-       <FontAwesomeIcon icon={faArrowLeftLong} className="arrow-left"/> Back to Users
-      </a>
+      <Link  className="back-link" to="/Dashboard">
+      <FontAwesomeIcon icon={faArrowLeftLong} className="arrow-left"/> Back to Users
+      </Link>
      </div>
       <div className="action-buttons">
         <h3 className="h3-div">User Details</h3>
@@ -34,7 +34,7 @@ const UserCard: React.FC =() =>{
             <p className="name-div">Grace Effiom</p>
             <p className="code-number">LSQFf587g90</p>
           </div>
-          <div className="line"></div>
+          <div className="line-a"></div>
           <div className="user-tier">
             <p className="user-tier-text">User's Tier</p>
             <p className="icon-star">
@@ -43,7 +43,7 @@ const UserCard: React.FC =() =>{
               <FontAwesomeIcon icon={faStar}/>
             </p>
           </div>
-          <div className="line"></div>
+          <div className="line-b"></div>
           <div className="account-info">
             <h4>₦200,000.00</h4>
             <p>9912345678 / Providus Bank</p>

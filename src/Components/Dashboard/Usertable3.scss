@@ -1,0 +1,219 @@
+
+$tablet: 1030px;
+$mobile: 440px;
+
+.ellipsis-icons{
+    cursor: pointer;
+    margin-left: 40px;
+    font-size: 20px;
+}
+.current-page{
+  display: flex;
+  margin-top: 7px;
+}
+.dropdown-container {
+  position: relative;
+}
+.dropdown-con{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+ margin-top: 10px;
+  max-width: calc(100vw - 62px); 
+  max-height: calc(100vh - 16px); 
+  overflow: auto;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 15px;
+}
+
+.dropdown-con.active {
+  display: block;
+}
+.table-content {
+    width: auto;
+    display: block;
+    justify-content:center;
+    justify-items: center;
+    justify-self: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: "Work Sans", serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    .inactive-div,
+    .acive-div,
+    .pending-div{
+      width: 100px;
+      height: 30px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 16.42px;
+      text-align: center; 
+    }
+    .inactive-div{
+      background: #545f7d19;
+      color: #545F7D;
+    }
+    .acive-div{
+      background: #39cd6322;
+      color: #39CD62;
+
+    }
+    .act{
+      display: block;
+      padding-top: 6px;
+      text-decoration: none;
+    }
+    .blacklist-div{
+      width: 100px;
+      height: 30px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 500;
+      padding-top: 2px;
+      line-height: 16.42px;
+      text-align: center; 
+      background: #e4033b24;
+      color: #E4033B;
+
+    }
+    .pending-div{
+      background: #e9b30023;
+      color: #E9B200;
+
+    }
+    .table-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #213F7D;
+        justify-content: center;
+        justify-self: center;
+        .hundred{
+          text-align: center;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 16.42px;
+          color: #213F7D;
+          background: #213F7D1A;
+          padding: 5px;
+          border: none;
+          margin-left: 4px;
+          border-radius: 4px;
+          cursor: pointer;
+          outline: none;
+    
+        }
+        .userlist{
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 16.42px;
+          color: #213F7D;
+          margin-top: 7px;
+        }
+        
+    
+        .pagination {
+          display: flex;
+          gap: 5px;
+          cursor: default;
+         
+    
+          .button-active{
+            border: none;
+            background-color: #39cdcc;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: 0.5s; 
+            cursor: pointer;
+          }
+          .ellipsis {
+            padding: 0 4px;
+            font-size: 13px;
+            color: #555;
+            margin-top: 3px;
+          }
+          
+          
+          button {
+    
+            &.active {
+              background-color: #6c757d;
+              color: #fff;
+              border: none;
+              transition: 0.5s;
+            }
+          
+          }
+        }
+      }
+    
+
+}
+th {
+    text-align: left;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #545f7d;
+  }
+
+td {
+  text-align: left;
+    padding: 10px;
+    font-size: 15px;
+    color: #495057;
+}
+.dropdown-icons{
+  margin-left: 5px;
+}
+
+@media (max-width: $tablet) {
+  body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+   }
+   .table-content{
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    padding: 15px;
+    margin-left: 0px;
+    justify-content: left;
+    justify-self: left;
+
+   }
+  
+}
+@media (max-width:$mobile) {
+   body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+   }
+   .table-content{
+    width: auto;
+    height: auto;
+    margin: 20px;
+    padding: 15px;
+    justify-content: center;
+    justify-self: center;
+
+   }
+}

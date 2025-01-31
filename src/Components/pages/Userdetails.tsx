@@ -10,8 +10,21 @@ const Userdetails: React.FC = () => {
   return (
     <>
       <Topbar />
-      <div className="flex-dashboard">
+      <div className="flex-Userdetails">
         <Sidebar />
+        <div>
+          <UserCard />
+           <DetailsTable />
+        </div>
+      </div>
+      <div className="flex-Userdetails-1">
+        <div>
+          <UserCard />
+           <DetailsTable />
+        </div>
+      </div>
+      <div className="flex-Userdetails-2">
+        
         <div>
           <UserCard />
            <DetailsTable />

@@ -39,8 +39,11 @@ const Display: React.FC =()=>{
       <Link style={{ textDecoration: "none", marginLeft: "40px" }} to="/Smallscreen1">
         <button className="login-btn">Small Screen</button>
       </Link>
-      <Link style={{ textDecoration: "none", marginLeft: "40px" }} to="/Usertable2">
-        <button className="login-btn">User Table</button>
+      <Link style={{ textDecoration: "none", marginLeft: "40px" }} to="/Usertable3">
+        <button className="login-btn">User Table 3</button>
+      </Link>
+      <Link style={{ textDecoration: "none", marginLeft: "40px" }} to="/Filterdrop">
+        <button className="login-btn">Filter drop</button>
       </Link>
 
     </>

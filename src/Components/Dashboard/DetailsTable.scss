@@ -1,3 +1,5 @@
+$tablet: 1030px;
+$mobile: 440px;
 
 body{
   font-family: "Work Sans", serif;
@@ -175,6 +177,118 @@ body{
     text-decoration: none;
 
   }
+  .flex-b{
+    display: flex;
+    gap: 35px;
+  }
    
 }
+@media (max-width: $tablet) {
+  .userdetails {
+    width: 95%;
+    height: auto;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    .group-119,
+    .group-120{
+      width: 90%;
+      height: auto;
+      // border: 1px solid;
+       padding-bottom: 30px;
+       margin: 0;
+      display: block; 
+    }
+    .flex-c{
+      // border: 1px solid;
+      width: auto;
+      width: 90%;
+      display: flex;
+      
+    }
+   
+  }
+}
   
+@media (max-width: $mobile) {
+
+  .userdetails {
+    width: 78%;
+    height: auto;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+  .group-119{
+    height: auto;
+    // border: 1px solid;
+     padding-bottom: 10px;
+     margin: 0;
+    display: block; 
+  }
+  .group-120{
+    height: auto;
+    // border: 1px solid;
+    margin-left: 20px;
+    display: block;
+    padding-bottom: 10px;
+   
+  }
+  .personal-info{
+    font-size: 16px;
+    
+  }
+  .flex-a{
+    // border: 1px solid;
+    width: auto;
+    width: 100%;
+    display: flex;
+    gap: 13px;
+    
+  }
+  .flex-b{
+    display: none;
+    
+  }
+  .flex-c{
+    // border: 1px solid;
+    width: auto;
+    width: 100%;
+    display: flex;
+    
+  }
+  .pro{
+    display: none;
+  }
+  .sub-group-1,
+  .sub-group-2,
+  .sub-group-3,
+  .sub-group-4,
+  .sub-group-5{
+    height: auto;
+    width: auto;
+    // border: 1px solid;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+  }
+  .detail-11,
+  .detail-8{
+    margin-left: 0px;
+  }
+
+}
+}

@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+body{
+  font-family: "Work Sans", serif;
+}
+
+$tablet: 1030px;
+$mobile: 440px;
 
 .ellipsis-icon{
     cursor: pointer;
@@ -8,7 +15,13 @@
   margin-top: 7px;
 }
 .dropdown-container {
-  position: relative;
+  position: absolute;
+
+}
+.dropdown-l{
+  position: absolute;
+ right: 110px;
+  top: 0px;
 }
 .dropdown-r{
   position: absolute;
@@ -22,18 +35,7 @@
   transition: all 0.2s ease-in-out;
   padding-bottom: 15px;
 }
-// .dropdown-r {
-//   position: absolute;
-//   background-color: #fff;
-//   width: 270px;
-//   height: auto;
 
-//   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-//   border-radius: 8px;
-//   display: block;
-//   cursor: pointer;
-//   z-index: 1000;
-// }
 
 .dropdown-r.active {
   display: block;
@@ -90,6 +92,9 @@
       display: block;
       padding-top: 6px;
       text-decoration: none;
+    }
+    .dropdown-icon{
+      margin-left: 5px;
     }
   
     table {
@@ -235,3 +240,117 @@
     }
   }
   
+  @media (max-width: $tablet) {
+    .table-container {
+      width: auto;
+      margin-left: 0px;
+      padding: 8px;
+      margin-top: 40px;
+    
+  
+      .inactive-div,
+      .acive-div,
+      .pending-div{
+        width: 80px;
+        height: 30px;  
+        font-size: 11px;
+        font-weight: 500;
+      }
+    
+      .blacklist-div{
+        width: 80px;
+        height: 30px;
+        border-radius: 100px;
+        font-size: 11px;
+        font-weight: 500;
+        padding-top: 1px;
+      
+  
+      }
+     
+      .act{
+        display: block;
+        padding-top: 6px;
+        text-decoration: none;
+      }
+      .dropdown-icon{
+        margin-left: 5px;
+      }
+    
+      table {
+        width: 96%;
+        margin-left: 2%;
+        
+        thead {
+         
+          th {
+            text-align: center;
+            padding: 2px;
+            font-size: 10px;
+            font-weight: 500;
+            padding: 3px;
+          }
+        }
+        
+        tbody {
+          
+          tr {
+            &:hover {
+              background: none;
+            }
+            td {
+              padding: 7px;
+              font-size: 12px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    
+      .table-footer {
+        display: flex;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 10px;
+        
+        .hundred{
+         
+          font-size: 12px;
+          font-weight: 500;
+          padding: 3px;
+        }
+        .userlist{
+         
+          font-size: 12px;
+          font-weight: 500;
+          margin-top: 7px;
+        }
+        
+    
+        .pagination {
+       
+  
+          .button-active{
+          
+            width: 30px;
+            height: 30px;
+           
+          }
+          .ellipsis {
+          
+            font-size: 13px;
+           font-weight: 500;
+          }
+          
+        }
+      }
+    }
+    .dropdown-r{
+      margin-top: 410px;
+      margin-left: -18px;
+      
+    }
+    .ellipsis-icon1{
+      display: none;
+    }
+}

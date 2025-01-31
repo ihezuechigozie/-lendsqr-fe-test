@@ -1,4 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit"
+export const resetSearch = () => ({
+    type: "RESET_SEARCH",
+});
+  
 export const userPage = createSlice({
     name: "page",
     initialState: {
@@ -13,6 +17,7 @@ export const userPage = createSlice({
 
         }
     }
+    
 })
 export const {
     userSearch

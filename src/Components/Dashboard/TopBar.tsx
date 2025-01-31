@@ -3,27 +3,33 @@ import Image from '../assets/Group.jpg';
 import Avatar from '../assets/avatar.png';
 import './TopBar.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell, faCaretDown, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBell, faCaretDown, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { userSearch } from "./redux/userPage";
+import Sidebar from "./SideBar";
 
 const Topbar: React.FC = () => {
-  const [input, setInput] = useState(""); // State to store input value
+
+  const [input, setInput] = useState(""); 
 
 const dispatch = useDispatch()
 
-  // Function to handle search button click
+ 
   const handleSearch = () => {
     if (input.trim() !== "") {
-      // Save the input value
+     
       console.log("User input:", input);
       dispatch(userSearch(input))
-      // Optionally clear the input field after saving
+   
       setInput("");
     } else {
       alert("Please enter a search term.");
     }
   };
+   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+      const showDropDown = () => {
+        setIsDropdownVisible((prevState) => !prevState); 
+      };
 
   return (
     <>
@@ -31,20 +37,28 @@ const dispatch = useDispatch()
         <div className="logo-div">
           <img className="lendsqr-logo" src={Image} alt="logo" />
           <div className="input-search">
-            <input
-              value={input} 
-              onChange={(e) => setInput(e.target.value)} 
-              className="inputdiv"
-              type="text"
-              placeholder="Search for anything"
-            />
-            <button className="button-btn" onClick={handleSearch}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="icon-1" />
-            </button>
-          </div>
-        </div>
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        className="inputdiv"
+        type="text"
+        placeholder="Search for anything"
+      />
+      <button className="button-btn" onClick={handleSearch}>
+      <FontAwesomeIcon icon={faMagnifyingGlass} className="icon-1" />
+      </button>
+    </div>
+        </div> 
 
         <div className="docs">
+        <p><FontAwesomeIcon icon={faBars}
+         onClick={showDropDown}
+         className={`arrowdown-iconbars ${isDropdownVisible ? 'active' : ''}`} /></p>
+          {isDropdownVisible && (
+        <div className="organization-drop">
+          <Sidebar />
+        </div>
+       )}
           <p style={{ textDecoration: "underline" }}>Docs</p>
           <p>
             <FontAwesomeIcon icon={faBell} className="icon-2" />
@@ -55,8 +69,10 @@ const dispatch = useDispatch()
           <p className="username-div">
             <b>Adedeji</b>
             <FontAwesomeIcon icon={faCaretDown} className="icon" />
+            
           </p>
         </div>
+      
       </nav>
     </>
   );

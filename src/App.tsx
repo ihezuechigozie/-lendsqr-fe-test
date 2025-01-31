@@ -13,7 +13,8 @@ import Sidebardrop from './Components/Dashboard/Sidebardrop'
 import Topbar from './Components/Dashboard/TopBar'
 import Sidebar from './Components/Dashboard/SideBar'
 import Smallsreen from './Components/Dashboard/Smallscreen1'
-import Usertable2 from './Components/Dashboard/Usertable2'
+import UserTable3 from './Components/Dashboard/Usertable3'
+import Filterdrop from './Components/Dashboard/Filterdrop'
 
 
 
@@ -36,7 +37,8 @@ function App() {
         <Route path='/TopBar' element={<Topbar/>}/>
         <Route path='/SideBar' element={<Sidebar/>}/>
         <Route path='/Smallscreen1' element={<Smallsreen/>}/>
-        <Route path='/Usertable2' element={<Usertable2/>}/>
+        <Route path='/Usertable3' element={<UserTable3/>}/>
+        <Route path='/Filterdrop' element={<Filterdrop/>}/>
       </Routes>
     </BrowserRouter> 
 

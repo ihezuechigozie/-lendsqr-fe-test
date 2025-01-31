@@ -1,7 +1,7 @@
 import React from 'react'
 import './Sidebardrop.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faDemocrat, faEye, faRecordVinyl, faTShirt } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -21,21 +21,21 @@ const Sidebardrop: React.FC =()=> {
         <div className="base-hover">
           <div className="stripes"></div>
           <div className="texts-1">
-            <FontAwesomeIcon icon={faEye} className="eye-icon" />
+            <FontAwesomeIcon icon={faDemocrat} className="eye-icon" />
             Lendsqr
           </div>
           </div>
         <div className="base-hover">
           <div className="stripes"></div>
           <div className="texts-1">
-            <FontAwesomeIcon icon={faEye} className="eye-icon" />
+            <FontAwesomeIcon icon={faRecordVinyl} className="eye-icon" />
             JullyLtd
           </div>
         </div>
         <div className="base-hover">
           <div className="stripes"></div>
           <div className="texts-1">
-            <FontAwesomeIcon icon={faEye} className="eye-icon" />
+            <FontAwesomeIcon icon={faTShirt} className="eye-icon" />
             Manitstr
           </div>
         </div>

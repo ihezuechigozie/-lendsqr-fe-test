@@ -6,7 +6,8 @@ import  './Dashboard.scss'
 import UserTable from "../Dashboard/UserTable";
 import { useSelector } from "react-redux";
 import { RootState } from "../../main";
-import Usertable2 from "../Dashboard/Usertable2";
+import UserTable3 from "../Dashboard/Usertable3";
+
 
 
 const Dashboard: React.FC =()=>{
@@ -21,15 +22,16 @@ else{
   component = <UserTable />
 }
 if(createQuery){ 
- subComponent = <Usertable2 input={createQuery.searchQuerry} />
+ subComponent = <UserTable3 input={createQuery.searchQuerry} />
 }
 else{
-  subComponent = <Usertable2 />
+  subComponent = <UserTable3 />
 }
 
   return (
     <>  
      <Topbar />
+     <br />
       <div className="flex-dashboard">
         <Sidebar />
         <div className="dasboard-cont">
@@ -41,10 +43,15 @@ else{
       <div className="flex-dashboard-2">  
  
         <div className="dasboard-cont-2">
-        <div className="dashboard-card">
         <DashboardCards />
-        </div>
          {subComponent}
+        </div>
+      </div>
+      <div className="flex-dashboard-3">  
+ 
+        <div className="dasboard-cont-3">
+        <DashboardCards />
+         {component}
         </div>
       </div>
 

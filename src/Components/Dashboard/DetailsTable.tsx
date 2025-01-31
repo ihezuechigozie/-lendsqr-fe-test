@@ -7,7 +7,8 @@ const DetailsTable: React.FC =()=> {
       <div className="userdetails">
           <div className='group-119'>
             <p className='personal-info'>Personal Information</p>
-            <div className='sub-group-1'>
+           <div className='flex-a'>
+           <div className='sub-group-1'>
               <div className='detail-1'>
                 <u className='full-name'>full Name</u>
                 <u className='grace'>Grace Effiom</u>
@@ -46,12 +47,14 @@ const DetailsTable: React.FC =()=> {
               </div>
              
             </div>
+           </div>
 
           </div> 
 
           <div className='group-119'>
             <p className='personal-info'>Education and Employment</p>
-            <div className='sub-group-1'>
+           <div className='flex'>
+           <div className='sub-group-1'>
               <div className='detail-6'>
                 <u className='full-name'>level of education</u>
                 <u className='grace'>B.Sc</u>
@@ -87,9 +90,11 @@ const DetailsTable: React.FC =()=> {
               </div>
              
             </div>
+           </div>
 
           </div> 
-          <div className='group-120'>
+           <div className='flex-c'>
+           <div className='group-120'>
             <p className='personal-info'>Socials</p>
             <div className='sub-group-5'>
               <div className='detail-13'>
@@ -128,11 +133,13 @@ const DetailsTable: React.FC =()=> {
               </div>
             </div>
 
-          </div> 
+          </div>
+           </div>
           <div className='group-120'>
-            <p className='personal-info'>Guarantor</p>
+            <p className='personal-info pro'>Guarantor</p>
             <div className='sub-group-4'>
-              <div className='detail-13'>
+              <div className='flex-b'>
+             <div className='detail-13'>
                 <u className='full-name'>full Name</u>
                 <u className='grace'>Debby Ogana</u>
               </div>
@@ -140,13 +147,17 @@ const DetailsTable: React.FC =()=> {
                 <u className='full-name'>Phone Number</u>
                 <u className='grace'>07060780922</u>
               </div>
-              <div className='detail-15'>
+            
+             
+             <div className='detail-15'>
                 <u className='full-name'>Email Address</u>
                 <u className='grace'>debby@gmail.com</u>
               </div>
               <div className='detail-15'>
                 <u className='full-name'>Relationship</u>
                 <u className='grace'>Sister</u>
+              </div>
+            
               </div>
             </div>
 

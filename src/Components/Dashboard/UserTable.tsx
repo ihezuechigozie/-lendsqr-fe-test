@@ -203,9 +203,11 @@ const [dropdownPositions, setDropdownPositions] = useState<{ [key: number]: { to
           if (el) {
             const rect = el.getBoundingClientRect();
             const overflowRight = rect.right > window.innerWidth;
+  
         
 
             if (overflowRight) el.style.left = `${window.innerWidth - rect.width - 62}px`;
+           
       
           }
         }}

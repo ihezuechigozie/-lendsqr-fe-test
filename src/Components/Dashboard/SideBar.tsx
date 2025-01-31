@@ -3,7 +3,8 @@ import './SideBar.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  faArrowLeft, faArrowRight, faBank, faBriefcase, faChartBar, faChevronDown, faClipboardList, faCoins, faHandHolding, faHandshake, faHome,faIdBadge,faMobileScreenButton, faPiggyBank, faSackDollar, faScroll, faSignOut, faSlidersH, faTools, faUser, faUserCheck, faUserCog, faUserFriends, faUserTimes } from "@fortawesome/free-solid-svg-icons";
 import Sidebardrop from "./Sidebardrop";
-
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,6 +13,18 @@ const Sidebar: React.FC = () =>{
     const showDropDown = () => {
       setIsDropdownVisible((prevState) => !prevState); 
     };
+
+    const navigate = useNavigate(); 
+
+  const handleLogout = () => {
+   
+    localStorage.removeItem("userToken");
+    sessionStorage.clear(); 
+    
+    navigate("/login", { replace: true });
+
+    window.history.replaceState(null, "", "/login");
+  };
   return (    
     <>
       <div className="side-bar-cont">
@@ -193,13 +206,15 @@ const Sidebar: React.FC = () =>{
         </div>
         <div className="linee"></div>
         <br />
-        <div className="base-div-2">
-          <div className="stripe"></div>
-          <div className="text-2-div">
-            <p><FontAwesomeIcon icon={faSignOut} className="logout" /></p>
-            <p className="text-2">Logout</p>
-          </div>
-        </div>
+        <Link target="_top" preventScrollReset  className="back-tologin-link" to="/Login">
+            <div className="base-div-2" onClick={handleLogout}>
+              <div className="stripe"></div>
+              <div className="text-2-div">
+                <p><FontAwesomeIcon icon={faSignOut} className="logout" /></p>
+                <p className="text-logout">Logout</p>
+              </div>
+            </div>
+          </Link>
         <p className="version">
           v1.2.0
         </p>

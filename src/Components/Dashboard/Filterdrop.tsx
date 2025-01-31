@@ -5,9 +5,10 @@ const Filterdrop: React.FC=()=>{
   return (
     <>
        
-      <div className="filter-section">
+      <div className="filter-drop">
         <br />
         <form>
+          <div>
           <label>
             Organization
             <select className="select-div">
@@ -24,7 +25,9 @@ const Filterdrop: React.FC=()=>{
             Email
             <input type="email" placeholder="Email" />
           </label>
-          <label>
+          </div>
+         <div>
+         <label>
             Date
             <input type="date" />
           </label>
@@ -41,6 +44,7 @@ const Filterdrop: React.FC=()=>{
               <option value="blacklisted">Blacklisted</option>
             </select>
           </label>
+         </div>
           <div className="filter-buttons">
             <button type="reset" className="reset-btn">
               Reset
