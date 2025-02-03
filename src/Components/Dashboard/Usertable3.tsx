@@ -33,7 +33,7 @@ const UserTable3: React.FC<UserTable3> = ({ input }) => {
   const [usersPerPage] = useState<number>(1);
 
   
-  const url = 'https://run.mocky.io/v3/e599e93a-18e6-49bc-83e4-ac0ad74df1c3';
+  const url = 'https://run.mocky.io/v3/51d17e68-ada5-48aa-8911-37f566069553';
   const fetchUsers = async () => {
     try {
       const response = await axios.get(url);
